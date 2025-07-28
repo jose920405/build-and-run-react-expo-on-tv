@@ -1,0 +1,10 @@
+{
+  "id": "co.jose.tv-test",
+  "version": "1.0.0",
+  "vendor": "jose",
+  "type": "web",
+  "main": "index.html",
+  "title": "jose-tv-test",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png"
+}
