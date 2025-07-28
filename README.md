@@ -14,8 +14,6 @@ To generate a static web site, you need to add this to you `app.json`
 npm run build:web
 ```
 
-You will finally need the following in the final `index.html` generated inside the `dist` folder
-
 ## Create LG Project
 
 ```sh
