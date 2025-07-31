@@ -14,25 +14,26 @@
     "modifyHtml": "bash inject-fixes.sh"
   },
   "dependencies": {
+    "core-js": "^3.44.0",
     "expo": "~53.0.20",
     "expo-status-bar": "~2.2.3",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-native": "0.79.5",
     "react-native-web": "^0.20.0",
-    "core-js": "^3.44.0",
     "regenerator-runtime": "^0.14.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.28.0",
     "@babel/core": "^7.28.0",
+    "@babel/plugin-transform-named-capturing-groups-regex": "^7.27.1",
+    "@babel/plugin-transform-nullish-coalescing-operator": "^7.27.1",
+    "@babel/plugin-transform-optional-chaining": "^7.27.1",
     "@babel/preset-env": "^7.28.0",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
-    "@babel/plugin-transform-optional-chaining": "^7.27.1",
-    "@babel/plugin-transform-nullish-coalescing-operator": "^7.27.1",
-    "typescript": "~5.8.3",
-    "@types/react": "~19.0.10"
+    "@types/react": "~19.0.10",
+    "typescript": "~5.8.3"
   },
   "private": true
 }

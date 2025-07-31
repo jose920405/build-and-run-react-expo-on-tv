@@ -51,6 +51,33 @@ if (typeof Element !== "undefined" && !Element.prototype.getRootNode) {
 </script>
 
 <script>
+if (typeof ResizeObserver === "undefined") {
+  window.ResizeObserver = function () {
+    this.observe = function () {};
+    this.unobserve = function () {};
+    this.disconnect = function () {};
+  };
+}
+</script>
+
+<script>
+if (typeof queueMicrotask === "undefined") {
+  window.queueMicrotask = function (cb) {
+    Promise.resolve().then(cb);
+  };
+}
+</script>
+
+<script>
+if (typeof navigator.userActivation === "undefined") {
+  navigator.userActivation = {
+    hasBeenActive: true,
+    isActive: true
+  };
+}
+</script>
+
+<script>
   function log(msg) {
     const el = document.getElementById("debug");
     if (el) el.innerHTML += `<div>${msg}</div>`;

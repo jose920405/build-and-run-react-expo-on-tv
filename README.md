@@ -113,6 +113,45 @@ if (typeof Element !== "undefined" && !Element.prototype.getRootNode) {
 </script>
 ```
 
+The following helps with an error that says `ResizeObserver is not defined at 9:45209`.
+
+```html
+<script>
+  if (typeof ResizeObserver === "undefined") {
+    window.ResizeObserver = function () {
+      this.observe = function () {};
+      this.unobserve = function () {};
+      this.disconnect = function () {};
+    };
+  }
+</script>
+```
+
+The following helps with an error that says `queueMicrotask is not defined at 9:45209`.
+
+```html
+<script>
+if (typeof queueMicrotask === "undefined") {
+  window.queueMicrotask = function (cb) {
+    Promise.resolve().then(cb);
+  };
+}
+</script>
+```
+
+The following helps with an error that says `cannot read property 'hasBeenActive' of undefined at 9:47894`.
+
+```html
+<script>
+if (typeof navigator.userActivation === "undefined") {
+  navigator.userActivation = {
+    hasBeenActive: true,
+    isActive: true
+  };
+}
+</script>
+```
+
 **Manual Logs**
 
 ```html
